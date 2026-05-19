@@ -200,17 +200,17 @@ textarea:focus{
     <h2>Form Order Kendala</h2>
     <form id="orderForm">
         <table>
-            <tr>
-                <td><label for="nama">NAMA</label></td>
-                <td><input type="text" id="nama" required placeholder="Nama Lengkap"></td>
-            </tr>
-            <tr>
-                <td><label for="nip">NIP</label></td>
-                <td><input type="text" id="nip" required placeholder="Nomor Induk Pegawai"></td>
-            </tr>
-            <tr>
-                <td><label for="kode_cabang">KODE CABANG</label></td>
-                    <td> <select id="kode_cabang" required>
+            <div class="form-group">
+                <label for="nama">NAMA</label>
+                <input type="text" id="nama" required placeholder="Nama Lengkap">
+            </div>
+            <div class="form-group">
+                <label for="nip">NIP</label>
+                <input type="text" id="nip" required placeholder="Nomor Induk Pegawai">
+            </div>
+           <div class="form-group">
+                <label for="kode_cabang">KODE CABANG</label>
+                    <select id="kode_cabang" required>
                         <option>D05248-DENPASAR UTARA</option>
                         <option>D05249-DENPASAR TIMUR</option>
                         <option>D05250-DENPASAR SELATAN</option>
@@ -218,36 +218,36 @@ textarea:focus{
                         <option>D05252-DENPASAR KOTA</option>
                     <option>D05253-DENPASAR KUTA</option>
                     </select>
-                    </td>
-            </tr>
-            <tr>
-                <td><label for="jenis_kendala">JENIS KENDALA</label></td>
-                    <td><select id="jenis_kendala" required>
+                </div>
+            <div class ="form-group">
+                <label for="jenis_kendala">JENIS KENDALA</label>
+                <select id="jenis_kendala" required>
                         <option value="">Pilih Jenis Kendala</option>
                         <option>Kendala Teknis</option>
                         <option>Kendala Administrasi</option>
                         <option>Kendala Logistik</option>
                         <option>Kendala Lainnya</option>
                     </select>
-            </tr>
-            <tr>
-                <td><label for="deskripsi">DESKRIPSI</label></td>
-                <td><textarea id="deskripsi" required placeholder="Jelaskan detail kendala..."></textarea></td>
-            </tr>
-            <tr>
-                <td><label for="whatsapp">WHATSAPP</label></td>
-                <td><input type="tel" id="whatsapp" required placeholder="Contoh: 081234567xxx"></td>
-            </tr>
-            <tr>
-                <td><label for="tanggal">TANGGAL</label></td>
-                <td><input type="date" id="tanggal" required></td>
-                <td> <input type="time" id="waktu" required></td>
-            </tr>
+            </div>
+                <div class="form-group">
+                    <label for="deskripsi">DESKRIPSI</label>
+                    <textarea id="deskripsi" required placeholder="Jelaskan detail kendala..."></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="whatsapp">WHATSAPP</label>
+                <input type="tel" id="whatsapp" required placeholder="Contoh: 081234567xxx">
+            </div>
+            <div class="form-group">
+                <label for="tanggal">TANGGAL</label>
+                <input type="date" id="tanggal" required>
+                <input type="time" id="waktu" required>
+            </div>
 
-            <tr>
-                <td><label for="kode">KODE</label></td>
-                <td><p id="kode">Memuat...</p></td>
-            </tr>
+            <div class="form-group">
+                <label for="kode">KODE</label>
+                <p id="kode">Memuat...</p>
+            </div>
         </table>
         <script>
                 function generateOrderNumber() {
