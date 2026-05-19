@@ -222,9 +222,11 @@ textarea:focus{
                 <label for="jenis_kendala">JENIS KENDALA</label>
                 <select id="jenis_kendala" required>
                         <option value="">Pilih Jenis Kendala</option>
-                        <option>Kendala Teknis</option>
-                        <option>Kendala Administrasi</option>
-                        <option>Kendala Logistik</option>
+                        <option>Kendala eService</option>
+                        <option>Kendala Jaringan</option>
+                        <option>Kendala CS Digital</option>
+                        <option>kendala Mesin Sari</option>
+                        <option>kendala eMail</option>    
                         <option>Kendala Lainnya</option>
                     </select>
             </div>
@@ -326,7 +328,7 @@ textarea:focus{
         .then(() => {
 
             // Nomor admin WA
-            let nomorAdmin = '6281246443838';
+            let nomorAdmin = '62881038428937';
 
             // Pesan WhatsApp
             let pesan =
@@ -340,7 +342,6 @@ Saya ingin melaporkan kendala dengan detail berikut:
 🆔 NIP : ${nip}
 🏢 Cabang : ${cabang}
 ⚠️ Kendala : ${kendala}
-
 📝 Deskripsi :
 ${deskripsi}
 
