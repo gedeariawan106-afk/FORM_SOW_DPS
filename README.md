@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -233,7 +232,6 @@ textarea:focus{
                     <label for="deskripsi">DESKRIPSI</label>
                     <textarea id="deskripsi" required placeholder="Jelaskan detail kendala..."></textarea>
                 </div>
-            </div>
             <div class="form-group">
                 <label for="whatsapp">WHATSAPP</label>
                 <input type="tel" id="whatsapp" required placeholder="Contoh: 081234567xxx">
@@ -266,7 +264,6 @@ textarea:focus{
         // Jalankan fungsi saat halaman dimuat
         window.onload = generateOrderNumber;
         </script>
-        </tr>
       <button type="submit" class="btn-submit" id="submitBtn">KIRIM ORDER</button>
       <div class="success" id="success"></div>
     </form>
