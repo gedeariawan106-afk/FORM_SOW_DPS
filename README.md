@@ -23,7 +23,7 @@ body{
 
 .form-container{
     width:100%;
-    max-width:400px;
+    max-width:700px;
     background:rgba(255,255,255,0.12);
     backdrop-filter:blur(12px);
     padding:30px;
@@ -248,8 +248,6 @@ textarea:focus{
             <div class ="form-group">
                 <label for="jenis_kendala">JENIS KENDALA</label>
                 <select id="jenis_kendala" required>
-                        <option value="kendala">Pilih Jenis Kendala</option>
-
                         <option>E-Service</option>
                         <option>Mesin Sari</option>
                         <option>BDS Web</option>
@@ -259,7 +257,6 @@ textarea:focus{
                         <option>PC Mati</option>
                         <option>Tablet Mati</option>
                         <option >Tablet Error</option>
-
                         <option>Update</option>
                         <option>Payroll</option>
                         <option>Kunjungan</option>
@@ -267,6 +264,7 @@ textarea:focus{
                         <option>Lainnya…</option>
                     </select>
             </div>
+            
                 <div class="form-group">
                     <label for="deskripsi">DESKRIPSI</label>
                     <textarea id="deskripsi" required placeholder="Jelaskan detail kendala..."></textarea>
