@@ -212,7 +212,6 @@ textarea:focus{
                 <label for="kode_cabang">KODE CABANG</label>
                     <select id="kode_cabang" required>
                         <option value="">Pilih Cabang</option>
-                        
                         <option>0040-KCU DENPASAR</option>
                         <option>0146-KCU KUTA</option>
                         <option>6115-KCP GATOT SUBROTO BARAT</option>
@@ -245,9 +244,11 @@ textarea:focus{
                         <option>7726-KCP DALUNG</option>
                     </select>
                 </div>
-            <div class ="form-group">
+                
+<div class ="form-group">
                 <label for="jenis_kendala">JENIS KENDALA</label>
                 <select id="jenis_kendala" required>
+                <option value="">Pilih Kendala</option>
                         <option>E-Service</option>
                         <option>Mesin Sari</option>
                         <option>BDS Web</option>
@@ -265,7 +266,7 @@ textarea:focus{
                     </select>
             </div>
             
-                <div class="form-group">
+<div class="form-group">
                     <label for="deskripsi">DESKRIPSI</label>
                     <textarea id="deskripsi" required placeholder="Jelaskan detail kendala..."></textarea>
                 </div>
@@ -273,31 +274,31 @@ textarea:focus{
                 <label for="whatsapp">WHATSAPP</label>
                 <input type="tel" id="whatsapp" required placeholder="Contoh: 081234567xxx">
             </div>
-            <div class="form-group">
+<div class="form-group">
                 <label for="tanggal">TANGGAL</label>
                 <input type="date" id="tanggal" required>
                 <label for="jam">JAM</label>
                 <input type="time" id="jam" required>
             </div>
 
-            <div class="form-group">
+<div class="form-group">
                 <label for="kode">KODE</label>
                 <p id="kode">Memuat...</p>
             </div>
         </table>
         <script>
-                function generateOrderNumber() {
+function generateOrderNumber() {
             // Membuat awalan (misal: SOW-)
-            const prefix = "SOW-";
+const prefix = "SOW-";
             
             // Membuat angka acak 6 digit (contoh: 100000 - 999999)
-            const randomNum = Math.floor(100000 + Math.random() * 900000);
+const randomNum = Math.floor(100000 + Math.random() * 900000);
             
             // Menggabungkan prefix dan angka
-            const finalOrder = prefix + randomNum;
+const finalOrder = prefix + randomNum;
             
             // Menampilkan di elemen HTML
-            document.getElementById("kode").innerText = finalOrder;
+document.getElementById("kode").innerText = finalOrder;
         }
         // Jalankan fungsi saat halaman dimuat
         window.onload = generateOrderNumber;
@@ -366,7 +367,7 @@ textarea:focus{
         .then(() => {
 
             // Nomor admin WA
-            let nomorAdmin = '6281246443838';
+            let nomorAdmin = '628';
 
             // Pesan WhatsApp
             let pesan =
