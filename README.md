@@ -22,7 +22,7 @@ body{
 
 .form-container{
     width:100%;
-    max-width:700px;
+    max-width:400px;
     background:rgba(255,255,255,0.12);
     backdrop-filter:blur(12px);
     padding:30px;
@@ -44,7 +44,7 @@ table{
     border-collapse:collapse;
 }
 
-table tr td{
+table div{
     padding:10px 5px;
     vertical-align:top;
 }
@@ -82,12 +82,12 @@ textarea:focus{
 
 #kode{
     background:#fff;
-    padding:10px;
-    border-radius:10px;
+    padding:18px;
+    border-radius:24px;
     color:#2563eb;
     font-weight:bold;
     text-align:center;
-    width:fit-content;
+    width:100%;
 }
 
 .btn-submit{
@@ -173,12 +173,12 @@ textarea:focus{
         padding:20px;
     }
 
-    table tr{
+    table div{
         display:flex;
         flex-direction:column;
     }
 
-    table tr td{
+    table div{
         width:100%;
     }
 
@@ -210,24 +210,57 @@ textarea:focus{
            <div class="form-group">
                 <label for="kode_cabang">KODE CABANG</label>
                     <select id="kode_cabang" required>
-                        <option>D05248-DENPASAR UTARA</option>
-                        <option>D05249-DENPASAR TIMUR</option>
-                        <option>D05250-DENPASAR SELATAN</option>
-                        <option>D05251-DENPASAR BARAT</option>
-                        <option>D05252-DENPASAR KOTA</option>
-                    <option>D05253-DENPASAR KUTA</option>
+                        <option value="">Pilih Cabang</option>
+                        <option>0040-KCU DENPASAR</option>
+                        <option>0146-KCU KUTA</option>
+                        <option>6115-KCP GATOT SUBROTO BARAT</option>
+                        <option>7730-KCP GATOT SUBROTO TIMUR</option>
+                        <option>6690-KCP GATOT SUBROTO DENPASAR</option>
+                        <option>6113-KCP BULUH INDAH</option>
+                        <option>0435-KCP COKROAΜΙΝΟΤΟ</option>
+                        <option>6485-KCP MAHENDRADATA</option>
+                        <option>7445-KCP BENOA</option>
+                        <option>7670-KCP SESETAN</option>
+                        <option>7680-KCP TEUKU UMAR</option>
+                        <option>0049-KCP MALUKU</option>
+                        <option>6110-KCP GRAND SUDIRMAN</option>
+                        <option>7725-KCP RENON</option>
+                        <option>0135-KCP UBUD</option>
+                        <option>0416-KCP GIANYAR</option>
+                        <option>0395-KCP KLUNGKUNG</option>
+                        <optio>6700-KCP SANUR</option>
+                        <option>7720-KCP BYPASS MUMBUL</option>
+                        <option>7723-KCP PECATU</option>
+                        <option>7705-KCP SUNSET BOULEVARD</option>
+                        <option>8580-KCP BYPASS NGURAH RAI</option>
+                        <option>0404-KCP KARTIKA PLAZA</option>
+                        <option>6955-KCP PASAR KUTA</option>
+                        <option>6130-KCP RAYA KUTA</option>
+                        <option>7700-KCP KEROBOKAN</option>
+                        <option>7703-KCP CANGGU</option>
+                        <option>0142-KCP TABANAN</option>
+                        <option>7728-KCP GAJAH MADA</option>
+                        <option>7726-KCP DALUNG</option>
                     </select>
                 </div>
             <div class ="form-group">
                 <label for="jenis_kendala">JENIS KENDALA</label>
                 <select id="jenis_kendala" required>
-                        <option value="">Pilih Jenis Kendala</option>
-                        <option>Kendala eService</option>
-                        <option>Kendala Jaringan</option>
-                        <option>Kendala CS Digital</option>
-                        <option>kendala Mesin Sari</option>
-                        <option>kendala eMail</option>    
-                        <option>Kendala Lainnya</option>
+                        <option value="kendala">Pilih Jenis Kendala</option>
+                        <option value="E-Service">E-Service</option>
+                        <option value="Mesin Sari">Mesin Sari</option>
+                        <option value="BDS Web">BDS Web</option>
+                        <option value="CS digital">CS digital</option>
+                        <option value="Printer">Printer</option>
+                        <option value="Server">Server</option>
+                        <option value="PC Mati">PC Mati</option>
+                        <option value="Tablet Mati">Tablet Mati</option>
+                        <option value="Tablet Error">Tablet Error</option>
+                        <option value="Update">Update</option>
+                        <option value="Payroll">Payroll</option>
+                        <option value="Kunjungan">Kunjungan</option>
+                        <option value="Teknis">Teknis</option>
+                        <option value="Lainnya">Lainnya…</option>
                     </select>
             </div>
                 <div class="form-group">
@@ -241,7 +274,8 @@ textarea:focus{
             <div class="form-group">
                 <label for="tanggal">TANGGAL</label>
                 <input type="date" id="tanggal" required>
-                <input type="time" id="waktu" required>
+                <label for="jam">JAM</label>
+                <input type="time" id="jam" required>
             </div>
 
             <div class="form-group">
@@ -273,7 +307,7 @@ textarea:focus{
 
 <script>
     // URL Google Apps Script
-    const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxfvEQHu_sL_ZHMtIdzoYnbL7VVXzBJhl2I6gCaV7JRjhHl8IN0NChp3HktVF95B1Nszw/exec";
+    const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxAeWD7u0eNiZugEmpshZStr4OZsetlwTCT7p3SFk2Hm0Wd1ESK1wvkyeqPVVu-5QC3cw/exec";
 
     // Generate kode order
     function generateOrderNumber() {
@@ -303,6 +337,7 @@ textarea:focus{
         let deskripsi = document.getElementById("deskripsi").value;
         let whatsapp = document.getElementById("whatsapp").value;
         let tanggal = document.getElementById("tanggal").value;
+        let jam = document.getElementById("jam").value;
         let kode = document.getElementById("kode").innerText;
 
         const formData = {
@@ -313,7 +348,8 @@ textarea:focus{
             deskripsi: deskripsi,
             whatsapp: whatsapp,
             tanggal: tanggal,
-            kode: kode
+            jam: jam,
+            kode: kode,
         };
 
         // Kirim ke Google Apps Script
@@ -328,7 +364,7 @@ textarea:focus{
         .then(() => {
 
             // Nomor admin WA
-            let nomorAdmin = '62881038428937';
+            let nomorAdmin = '6281246443838';
 
             // Pesan WhatsApp
             let pesan =
@@ -342,10 +378,12 @@ Saya ingin melaporkan kendala dengan detail berikut:
 🆔 NIP : ${nip}
 🏢 Cabang : ${cabang}
 ⚠️ Kendala : ${kendala}
+
 📝 Deskripsi :
 ${deskripsi}
 
 📱 WhatsApp : ${whatsapp}
+⏰ Jam : ${jam}
 📅 Tanggal : ${tanggal}`;
 
             // Encode pesan
