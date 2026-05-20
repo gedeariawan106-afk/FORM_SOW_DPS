@@ -1,165 +1,220 @@
-<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Order Kendala Teknisi</title>
     <style>
-       *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+        /* =========================
+   GOOGLE FONT
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+/* =========================
+   BODY
+========================= */
 body{
-    font-family:Arial, sans-serif;
-    background:linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb);
+    margin:0;
+    padding:30px 15px;
+    font-family:'Poppins', sans-serif;
+    background:
+    linear-gradient(135deg,#0f172a,#1e293b,#2563eb);
     min-height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
-    padding:20px;
 }
 
+/* =========================
+   FORM CONTAINER
+========================= */
 .form-container{
     width:100%;
     max-width:700px;
     background:rgba(255,255,255,0.12);
     backdrop-filter:blur(12px);
-    padding:30px;
-    border-radius:20px;
-    box-shadow:0 10px 35px rgba(0,0,0,0.3);
+    -webkit-backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,0.2);
+    border-radius:25px;
+    padding:35px;
+    box-shadow:
+    0 8px 32px rgba(0,0,0,0.35);
     animation:fadeIn 0.8s ease;
 }
 
+/* =========================
+   TITLE
+========================= */
 .form-container h2{
     text-align:center;
     color:#fff;
-    margin-bottom:25px;
-    font-size:28px;
+    font-size:30px;
+    margin-bottom:30px;
+    font-weight:700;
     letter-spacing:1px;
 }
 
-table{
-    width:100%;
-    border-collapse:collapse;
+/* =========================
+   FORM GROUP
+========================= */
+.form-group{
+    margin-bottom:22px;
+    display:flex;
+    flex-direction:column;
 }
 
-table div{
-    padding:10px 5px;
-    vertical-align:top;
-}
-
-label{
-    color:#fff;
-    font-weight:bold;
+/* =========================
+   LABEL
+========================= */
+.form-group label{
+    color:#ffffff;
+    margin-bottom:8px;
     font-size:14px;
+    font-weight:600;
+    letter-spacing:0.5px;
 }
 
-input,
-select,
-textarea{
+/* =========================
+   INPUT, SELECT, TEXTAREA
+========================= */
+.form-group input,
+.form-group select,
+.form-group textarea{
     width:100%;
-    padding:12px 14px;
+    padding:14px 16px;
     border:none;
     outline:none;
-    border-radius:12px;
-    background:rgba(255,255,255,0.95);
-    font-size:14px;
-    transition:0.3s;
+    border-radius:14px;
+    font-size:15px;
+    background:rgba(255,255,255,0.15);
+    color:#fff;
+    transition:0.3s ease;
+    box-sizing:border-box;
+    border:1px solid rgba(255,255,255,0.15);
 }
 
-textarea{
+/* OPTION SELECT */
+.form-group select option{
+    color:#000;
+}
+
+/* TEXTAREA */
+.form-group textarea{
     min-height:120px;
     resize:vertical;
 }
 
-input:focus,
-select:focus,
-textarea:focus{
-    transform:scale(1.02);
-    box-shadow:0 0 10px rgba(255,255,255,0.6);
+/* PLACEHOLDER */
+::placeholder{
+    color:rgba(255,255,255,0.7);
 }
 
+/* FOCUS EFFECT */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+    border:1px solid #60a5fa;
+    box-shadow:
+    0 0 15px rgba(96,165,250,0.5);
+    transform:translateY(-2px);
+}
+
+/* =========================
+   KODE ORDER
+========================= */
 #kode{
-    background:#fff;
-    padding:18px;
-    border-radius:24px;
-    color:#2563eb;
-    font-weight:bold;
+    background:rgba(255,255,255,0.12);
+    padding:14px;
+    border-radius:12px;
+    color:#fff;
+    font-weight:600;
+    letter-spacing:1px;
     text-align:center;
-    width:100%;
+    border:1px dashed rgba(255,255,255,0.3);
 }
 
+/* =========================
+   BUTTON SUBMIT
+========================= */
 .btn-submit{
     width:100%;
-    margin-top:25px;
-    padding:15px;
+    padding:16px;
     border:none;
-    border-radius:14px;
-    background:linear-gradient(135deg,#00c853,#00e676);
-    color:#fff;
-    font-size:18px;
-    font-weight:bold;
+    border-radius:16px;
+    font-size:17px;
+    font-weight:700;
+    letter-spacing:1px;
     cursor:pointer;
+    color:#fff;
     position:relative;
     overflow:hidden;
-    transition:all 0.35s ease;
-    box-shadow:0 5px 15px rgba(0,200,83,0.4);
-}
 
-/* Hover animasi */
-.btn-submit:hover{
-    transform:translateY(-3px) scale(1.02);
-    box-shadow:0 10px 25px rgba(0,255,120,0.6);
-}
-
-/* Efek klik */
-.btn-submit:active{
-    transform:scale(0.96);
-}
-
-/* Efek cahaya berjalan */
-.btn-submit::before{
-    content:'';
-    position:absolute;
-    top:0;
-    left:-100%;
-    width:100%;
-    height:100%;
     background:linear-gradient(
-        120deg,
-        transparent,
-        rgba(255,255,255,0.5),
-        transparent
+        270deg,
+        #2563eb,
+        #06b6d4,
+        #3b82f6,
+        #0ea5e9
     );
-    transition:0.6s;
+
+    background-size:600% 600%;
+    animation:gradientMove 6s ease infinite;
+
+    transition:0.4s ease;
+
+    box-shadow:
+    0 10px 25px rgba(37,99,235,0.4);
 }
 
-.btn-submit:hover::before{
-    left:100%;
+/* HOVER BUTTON */
+.btn-submit:hover{
+    transform:
+    translateY(-4px)
+    scale(1.02);
+
+    box-shadow:
+    0 15px 35px rgba(37,99,235,0.6);
 }
 
-/* Tombol disabled */
+/* CLICK EFFECT */
+.btn-submit:active{
+    transform:scale(0.98);
+}
+
+/* DISABLED */
 .btn-submit:disabled{
-    background:#999;
+    opacity:0.7;
     cursor:not-allowed;
-    box-shadow:none;
 }
 
-/* Success Message */
+/* =========================
+   SUCCESS MESSAGE
+========================= */
 .success{
     margin-top:20px;
     text-align:center;
-    font-weight:bold;
-    color:#fff;
+    font-size:15px;
+    font-weight:600;
 }
 
-/* Animasi form muncul */
+/* =========================
+   ANIMATION
+========================= */
+@keyframes gradientMove{
+    0%{
+        background-position:0% 50%;
+    }
+    50%{
+        background-position:100% 50%;
+    }
+    100%{
+        background-position:0% 50%;
+    }
+}
+
 @keyframes fadeIn{
     from{
         opacity:0;
-        transform:translateY(20px);
+        transform:translateY(30px);
     }
     to{
         opacity:1;
@@ -167,29 +222,22 @@ textarea:focus{
     }
 }
 
-/* Responsive */
-@media(max-width:600px){
+/* =========================
+   RESPONSIVE
+========================= */
+@media(max-width:768px){
 
     .form-container{
-        padding:20px;
+        padding:25px;
+        border-radius:20px;
     }
 
-    table div{
-        display:flex;
-        flex-direction:column;
-    }
-
-    table div{
-        width:100%;
-    }
-
-    label{
-        margin-bottom:5px;
-        display:block;
+    .form-container h2{
+        font-size:24px;
     }
 
     .btn-submit{
-        font-size:16px;
+        font-size:15px;
     }
 }
     </style>
@@ -199,7 +247,6 @@ textarea:focus{
 <div class="form-container">
     <h2>Form Order Kendala</h2>
     <form id="orderForm">
-        <table>
             <div class="form-group">
                 <label for="nama">NAMA</label>
                 <input type="text" id="nama" required placeholder="Nama Lengkap">
@@ -212,6 +259,7 @@ textarea:focus{
                 <label for="kode_cabang">KODE CABANG</label>
                     <select id="kode_cabang" required>
                         <option value="">Pilih Cabang</option>
+
                         <option>0040-KCU DENPASAR</option>
                         <option>0146-KCU KUTA</option>
                         <option>6115-KCP GATOT SUBROTO BARAT</option>
@@ -229,7 +277,7 @@ textarea:focus{
                         <option>0135-KCP UBUD</option>
                         <option>0416-KCP GIANYAR</option>
                         <option>0395-KCP KLUNGKUNG</option>
-                        <optio>6700-KCP SANUR</option>
+                        <option>6700-KCP SANUR</option>
                         <option>7720-KCP BYPASS MUMBUL</option>
                         <option>7723-KCP PECATU</option>
                         <option>7705-KCP SUNSET BOULEVARD</option>
@@ -244,52 +292,58 @@ textarea:focus{
                         <option>7726-KCP DALUNG</option>
                     </select>
                 </div>
-                
-<div class ="form-group">
+            <div class ="form-group">
                 <label for="jenis_kendala">JENIS KENDALA</label>
                 <select id="jenis_kendala" required>
                         <option value="">Pilih Jenis Kendala</option>
-                        <option>Kendala eService</option>
-                        <option>Kendala Jaringan</option>
-                        <option>Kendala CS Digital</option>
-                        <option>kendala Mesin Sari</option>
-                        <option>kendala eMail</option>    
-                        <option>Kendala Lainnya</option>
+                        <option>E-Service</option>
+                        <option>Mesin Sari</option>
+                        <option>BDS Web</option>
+                        <option>CS digital</option>
+                        <option>Printer</option>
+                        <option>Server</option>
+                        <option>PC Mati</option>
+                        <option>Tablet Mati</option>
+                        <option>Tablet Error</option>
+                        <option>Update</option>
+                        <option>Payroll</option>
+                        <option>Kunjungan</option>
+                        <option>Teknis</option>
+                        <option>Lainnya…</option>
                     </select>
-            
-<div class="form-group">
+            </div>
+                <div class="form-group">
                     <label for="deskripsi">DESKRIPSI</label>
                     <textarea id="deskripsi" required placeholder="Jelaskan detail kendala..."></textarea>
                 </div>
+
             <div class="form-group">
                 <label for="whatsapp">WHATSAPP</label>
                 <input type="tel" id="whatsapp" required placeholder="Contoh: 081234567xxx">
             </div>
-<div class="form-group">
+            <div class="form-group">
                 <label for="tanggal">TANGGAL</label>
                 <input type="date" id="tanggal" required>
                 <label for="jam">JAM</label>
                 <input type="time" id="jam" required>
             </div>
-
-<div class="form-group">
+            <div class="form-group">
                 <label for="kode">KODE</label>
                 <p id="kode">Memuat...</p>
             </div>
-        </table>
         <script>
-function generateOrderNumber() {
+                function generateOrderNumber() {
             // Membuat awalan (misal: SOW-)
-const prefix = "SOW-";
+            const prefix = "SOW-";
             
             // Membuat angka acak 6 digit (contoh: 100000 - 999999)
-const randomNum = Math.floor(100000 + Math.random() * 900000);
+            const randomNum = Math.floor(100000 + Math.random() * 900000);
             
             // Menggabungkan prefix dan angka
-const finalOrder = prefix + randomNum;
+            const finalOrder = prefix + randomNum;
             
             // Menampilkan di elemen HTML
-document.getElementById("kode").innerText = finalOrder;
+            document.getElementById("kode").innerText = finalOrder;
         }
         // Jalankan fungsi saat halaman dimuat
         window.onload = generateOrderNumber;
@@ -302,18 +356,6 @@ document.getElementById("kode").innerText = finalOrder;
 <script>
     // URL Google Apps Script
     const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxAeWD7u0eNiZugEmpshZStr4OZsetlwTCT7p3SFk2Hm0Wd1ESK1wvkyeqPVVu-5QC3cw/exec";
-
-    // Generate kode order
-    function generateOrderNumber() {
-        const prefix = "SOW-";
-        const randomNum = Math.floor(100000 + Math.random() * 900000);
-        const finalOrder = prefix + randomNum;
-
-        document.getElementById("kode").innerText = finalOrder;
-    }
-
-    window.onload = generateOrderNumber;
-
     // Submit Form
     document.getElementById('orderForm').addEventListener('submit', function(e) {
         e.preventDefault();
@@ -358,7 +400,7 @@ document.getElementById("kode").innerText = finalOrder;
         .then(() => {
 
             // Nomor admin WA
-            let nomorAdmin = '628';
+            let nomorAdmin = '6281246443838';
 
             // Pesan WhatsApp
             let pesan =
