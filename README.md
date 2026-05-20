@@ -248,23 +248,14 @@ textarea:focus{
 <div class ="form-group">
                 <label for="jenis_kendala">JENIS KENDALA</label>
                 <select id="jenis_kendala" required>
-                <option value="">Pilih Kendala</option>
-                        <option>E-Service</option>
-                        <option>Mesin Sari</option>
-                        <option>BDS Web</option>
-                        <option>CS digital</option>
-                        <option>Printer</option>
-                        <option>Server</option>
-                        <option>PC Mati</option>
-                        <option>Tablet Mati</option>
-                        <option >Tablet Error</option>
-                        <option>Update</option>
-                        <option>Payroll</option>
-                        <option>Kunjungan</option>
-                        <option>Teknis</option>
-                        <option>Lainnya…</option>
+                        <option value="">Pilih Jenis Kendala</option>
+                        <option>Kendala eService</option>
+                        <option>Kendala Jaringan</option>
+                        <option>Kendala CS Digital</option>
+                        <option>kendala Mesin Sari</option>
+                        <option>kendala eMail</option>    
+                        <option>Kendala Lainnya</option>
                     </select>
-            </div>
             
 <div class="form-group">
                     <label for="deskripsi">DESKRIPSI</label>
