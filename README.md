@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -211,6 +212,7 @@ textarea:focus{
                 <label for="kode_cabang">KODE CABANG</label>
                     <select id="kode_cabang" required>
                         <option value="">Pilih Cabang</option>
+                        
                         <option>0040-KCU DENPASAR</option>
                         <option>0146-KCU KUTA</option>
                         <option>6115-KCP GATOT SUBROTO BARAT</option>
@@ -247,20 +249,22 @@ textarea:focus{
                 <label for="jenis_kendala">JENIS KENDALA</label>
                 <select id="jenis_kendala" required>
                         <option value="kendala">Pilih Jenis Kendala</option>
-                        <option value="E-Service">E-Service</option>
-                        <option value="Mesin Sari">Mesin Sari</option>
-                        <option value="BDS Web">BDS Web</option>
-                        <option value="CS digital">CS digital</option>
-                        <option value="Printer">Printer</option>
-                        <option value="Server">Server</option>
-                        <option value="PC Mati">PC Mati</option>
-                        <option value="Tablet Mati">Tablet Mati</option>
-                        <option value="Tablet Error">Tablet Error</option>
-                        <option value="Update">Update</option>
-                        <option value="Payroll">Payroll</option>
-                        <option value="Kunjungan">Kunjungan</option>
-                        <option value="Teknis">Teknis</option>
-                        <option value="Lainnya">Lainnya…</option>
+
+                        <option>E-Service</option>
+                        <option>Mesin Sari</option>
+                        <option>BDS Web</option>
+                        <option>CS digital</option>
+                        <option>Printer</option>
+                        <option>Server</option>
+                        <option>PC Mati</option>
+                        <option>Tablet Mati</option>
+                        <option >Tablet Error</option>
+
+                        <option>Update</option>
+                        <option>Payroll</option>
+                        <option>Kunjungan</option>
+                        <option>Teknis</option>
+                        <option>Lainnya…</option>
                     </select>
             </div>
                 <div class="form-group">
