@@ -400,8 +400,7 @@ body{
         .then(() => {
 
             // Nomor admin WA
-            let nomorAdmin = '6281236472747,6281246443838';
-
+        let url = "https//wa.me/qr/7NQDML65RXLYD1";
             // Pesan WhatsApp
             let pesan =
 `Hallo Admin,
