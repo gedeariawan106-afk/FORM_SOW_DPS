@@ -355,7 +355,7 @@ body{
 
 <script>
     // URL Google Apps Script
-    const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxAeWD7u0eNiZugEmpshZStr4OZsetlwTCT7p3SFk2Hm0Wd1ESK1wvkyeqPVVu-5QC3cw/exec";
+    const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxaUM3QgDRf-72dkjRmekGdF08aUDZdT6_A6kjYE2lkBLdkkuh39gwBW3TEY1JjxhtiNg/exec";
     // Submit Form
     document.getElementById('orderForm').addEventListener('submit', function(e) {
         e.preventDefault();
